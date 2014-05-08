@@ -1,4 +1,4 @@
-setwd("code")
+#setwd("code")
 source("loadData.R")
 
 png("../plots/plot3.png")
