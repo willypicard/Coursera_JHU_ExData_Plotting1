@@ -6,6 +6,9 @@ ZIP_FILE_DATA = paste(FILE_DATA, "zip", sep = ".")
 URL_DATA = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 
 old_wd = getwd()
+if (!file.exists(DATA_DIR)){
+  dir.create(DATA_DIR)
+}
 setwd(DATA_DIR)
 if (!file.exists(UNZIPPED_FILE_DATA)){
   download.file(URL_DATA, ZIP_FILE_DATA)
